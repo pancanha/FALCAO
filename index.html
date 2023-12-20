@@ -6,27 +6,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FalcãoNET</title>
     <link rel="stylesheet" href="css/falcao.css">
-    <script src="js/falcao.js"></script>
+    <script src="js/falcao.js" defer></script>
 </head>
 
 <body onresize="mudouTamanho()">
     <header>
-        <h1>números para contato</h1>
-        <menu>
-            <img src="img/logo_falcao.png" alt="" width="300px">
-            <nav>
-                <ul>
-                    <a href="#">MENU</a>
-                    <a href="#">CONTATOS</a>
-                    <a href="#">QUEM SOMOS</a>
-                    <a href="#">CIDADES</a>
-                </ul>
-            </nav>
-        </menu>
+        <h1><a href="">Número para contato</a></h1>
+        <div id="cabecalho">
+            <img src="img/logo_falcao.png" alt="">
+        </div>
     </header>
+    <nav>
+        <span class="material-symbols-outlined" onclick="clickMenu()">
+            menu
+        </span>
+        
+        <menu id="itens" style="margin-bottom: 20px;">
+            <ul>
+                <a href="#">MENU</a>
+                <a href="#">CONTATOS</a>
+                <a href="#">QUEM SOMOS</a>
+                <a href="#">CIDADES</a>
+            </ul>
+        </menu>
 
     <section class="slider">
-        <div class="slider-content">
+        <div class="slider-content" style="margin-top: 100px;">
 
             <input type="radio" name="btn-radio" id="radio1">
             <input type="radio" name="btn-radio" id="radio2">
@@ -34,7 +39,7 @@
 
 
             <div id="carouselImage" class="slide-box primeiro">
-                <img class="img-desktop" src="img/testeimg.jpg" height="600px" alt="slide 1">
+                <img class="img-desktop" src="img/testeimg.jpg" alt="slide 1">
                 <img class="img-mobile" src="" alt="slide 1">
             </div>
 

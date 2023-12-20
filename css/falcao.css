@@ -41,10 +41,11 @@ header>h1 {
     color: white;
 }
 /*Parte do menu imagem*/
-header>menu {
+#cabecalho {
     background-color: #02054b;
     padding: 100px;
     text-align: left;
+    display: block;
 }
 
 header>menu>nav{
@@ -56,12 +57,11 @@ header>menu>nav>ul>a{
     display: inline;
     font-size: 30px;
     padding: 30px;
-    background-color: #4163c9;
-    
-    
+    background-color: #4163c9; 
 }
 
-/* SLIDE */
+
+/* -------------------------SLIDE---------------------------------- */
 
 
 section.slider{
@@ -147,3 +147,115 @@ section.slider{
         margin-top: 60%;
     }
 }
+
+/*---------------------------MENU HAMBURGUER------------------------------*/
+
+span.material-symbols-outlined {
+    background-color: var(--cor7);
+    color: rgb(255, 255, 255);
+    display: block;
+    text-align: center;
+    padding: 10px;
+    cursor: pointer;
+}
+
+span.material-symbols-outlined:hover {
+    background-image: linear-gradient(45deg, var(--cor0), var(--cor1));
+    color: black;
+}
+
+menu {
+    display: none;
+}
+
+menu>ul {
+    list-style: none;
+}
+
+menu>ul>a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    background-color: rgb(255, 255, 255);
+    color: var(--cor0);
+    text-align: center;
+    border-top: 0px solid rgb(190, 188, 188);
+    cursor: pointer;
+}
+
+@media screen and (min-width: 768px) {
+
+    span.material-symbols-outlined {
+        display: none;
+    }
+ 
+    menu {
+        display: block;
+        
+    }
+
+    menu>ul>a {
+        display: inline-block;
+
+        border-radius: 5px;
+    }
+}   
+
+/*-------------------------BOTÃO---------------------------------*/
+
+nav {
+    background-color: rgb(255, 255, 255);
+    padding: 10px;
+    box-shadow: 0px 7px 9px rgba(0, 0, 0, 0.37);
+    text-align: center;
+}
+
+menu>ul>a {
+    color: rgb(16, 4, 87);
+    padding: 10px;
+    border-radius: 0px;
+    text-decoration: none;
+    font-weight: bolder;
+    transition-duration: 0.4;
+    position: relative;
+    
+}
+
+menu>ul>a:hover {
+    background-color: var(--cor5);
+    color: white;
+}
+
+.menu {
+    width: 100%;
+    display: inline-block;
+}
+
+menu>ul>a {
+    color: var(--cor7);
+    text-decoration: none;
+    font-size: 18px;
+    padding-bottom: 8px;
+    position: relative;
+    cursor: pointer;
+}
+
+menu>ul>a::after {
+    content: " ";
+    width: 0px;
+    height: 4px;
+    background-image: linear-gradient(45deg, var(--cor0), var(--cor1));
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: width 0.7s;
+}
+
+menu>ul>a:hover::after {
+    width: 100%;
+}
+
+menu>ul>a:hover {
+    color: #ffffff;
+}
+
