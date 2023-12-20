@@ -43,7 +43,8 @@ header>h1 {
 /*Parte do menu imagem*/
 #cabecalho {
     background-color: #02054b;
-    padding: 100px;
+    padding-top: 100px;
+    padding-left: 50px;
     text-align: left;
     display: block;
 }
@@ -166,6 +167,7 @@ span.material-symbols-outlined:hover {
 
 menu {
     display: none;
+    
 }
 
 menu>ul {
@@ -192,6 +194,7 @@ menu>ul>a {
     menu {
         display: block;
         
+        
     }
 
     menu>ul>a {
@@ -204,7 +207,7 @@ menu>ul>a {
 /*-------------------------BOTÃO---------------------------------*/
 
 nav {
-    background-color: rgb(255, 255, 255);
+    background-color: #02054b;
     padding: 10px;
     box-shadow: 0px 7px 9px rgba(0, 0, 0, 0.37);
     text-align: center;
