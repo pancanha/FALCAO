@@ -48,7 +48,12 @@ header>h1 {
     text-align: left;
     display: block;
 }
-
+@media screen and (min-width: 768px){
+#itens {
+    margin-top: -100px;
+    
+}
+}
 header>menu>nav{
     background-color: #02054b;
     color: white;
@@ -178,10 +183,10 @@ menu>ul>a {
     display: block;
     padding: 10px;
     text-decoration: none;
-    background-color: rgb(255, 255, 255);
+    background-color: rgba(255, 255, 255, 0);
     color: var(--cor0);
     text-align: center;
-    border-top: 0px solid rgb(190, 188, 188);
+    border: 2px solid rgb(175, 172, 172);
     cursor: pointer;
 }
 
@@ -221,6 +226,7 @@ menu>ul>a {
     font-weight: bolder;
     transition-duration: 0.4;
     position: relative;
+    border-radius: 10px;
     
 }
 
