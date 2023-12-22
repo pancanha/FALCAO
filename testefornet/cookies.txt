@@ -1,0 +1,5 @@
+# HTTrack Website Copier Cookie File
+# This file format is compatible with Netscape cookies
+fornet.net.br	TRUE	/	FALSE	1999999999	TFDCIslifcBLMzn	pXzO15
+fornet.net.br	TRUE	/	FALSE	1999999999	dSmxcWsTzbFePBv	mWwbNxM
+
