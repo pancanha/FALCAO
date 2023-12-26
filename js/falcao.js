@@ -27,11 +27,16 @@ function mudouTamanho() {
     }
 }
 function clickMenu(){
-   if (itens.style.display == 'block') {
-    itens.style.display = 'none'
-   } else {
+   if (itens.style.display == 'none') {
     itens.style.display = 'block'
+   } else {
+    itens.style.display = 'none'
    }
+}
+
+function toggleDropdown() {
+    var dropdownMenu = document.querySelector('.dropdown-menu');
+    dropdownMenu.style.display = (dropdownMenu.style.display == 'block') ? 'none' : 'block' ;
 }
 
 //------------------------------BOTÃO QUE SOBE---------------------------//
