@@ -85,24 +85,27 @@ a:hover {
         width: 20px;
         display: block;
     }
-    #hamburger::after, #hamburger::before{
+    #hamburger::after, #hamburger::before {
         content: '';
         display: block;
         width: 20px;
         height: 2px;
         background-color: currentColor;
         margin-top: 5px;
+        transition: .3s;
+        position: relative;
     }
 
-    #nav.active #hamburger{
+    #nav.active #hamburger {
         border-top-color: transparent;
     }
-    #nav.active #hamburger::before{
-        transform: rotate(45deg);
+    #nav.active #hamburger::before {
+        transform: rotate(135deg);
 
     }
 
     #nav.active #hamburger::after{
-
+        transform: rotate(-135deg);
+        top: -7px;
     }
 }
