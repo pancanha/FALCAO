@@ -1,11 +1,11 @@
+document.addEventListener('DOMContentLoaded', function(){
 const btnMobile = document.getElementById('btn-mobile');
 
-function toggleMenu(event) {
-    if (event.type === 'touchstart') event.preventDefault();
+function toggleMenu() {
     const nav = document.getElementById('nav');
     nav.classList.toggle('active');
     
 }
 
-btnMobile.document.addEventListener('click', toggleMenu);
-btnMobile.document.addEventListener('touchstart', toggleMenu);
+btnMobile.addEventListener('click', toggleMenu);
+});
