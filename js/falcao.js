@@ -1,3 +1,21 @@
+
+//-------------------------- MENU HAMBURGUER MOBILE-----------------//
+document.addEventListener('DOMContentLoaded', function(){
+    const btnMobile = document.getElementById('btn-mobile');
+    
+    function toggleMenu() {
+        const nav = document.getElementById('nav');
+        nav.classList.toggle('active');
+        
+        
+    }
+    
+    btnMobile.addEventListener('click', toggleMenu);
+    });
+
+
+
+
 //------------------------SLIDE--------------------------//
 var radio = document.querySelector('.manual-btn')
 var cont = 1
@@ -16,27 +34,6 @@ function proximaImg(){
     }
 
     document.getElementById('radio'+cont).checked = true
-}
-//-------------------------- MENU HAMBURGUER-----------------//
-
-function mudouTamanho() {
-    if(window.innerWidth >= 768) {
-        itens.style.display = 'block'
-    } else {
-        itens.style.display = 'none'
-    }
-}
-function clickMenu(){
-   if (itens.style.display == 'none') {
-    itens.style.display = 'block'
-   } else {
-    itens.style.display = 'none'
-   }
-}
-
-function toggleDropdown() {
-    var dropdownMenu = document.querySelector('.dropdown-menu');
-    dropdownMenu.style.display = (dropdownMenu.style.display == 'block') ? 'none' : 'block' ;
 }
 
 //------------------------------BOTÃO QUE SOBE---------------------------//
