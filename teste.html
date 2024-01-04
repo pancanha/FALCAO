@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Move Image</title>
+</head>
+<body>
+    <div class="container">
+        <img class="moving-image" src="img/logo_falcao.png" alt="Imagem">
+    </div>
+</body>
+<style>
+    body, html {
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.moving-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: transform 2s ease-in-out; /* Adiciona uma transição suave para o movimento */
+}
+
+.moving-image.move-to-center {
+    transform: translate(50%, 50%); /* Move a imagem para o centro da tela */
+}
+
+</style>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+    const image = document.querySelector('.moving-image');
+
+    // Adiciona a classe para mover a imagem após um pequeno atraso
+    setTimeout(() => {
+        image.classList.add('move-to-center');
+    }, 1); // Atraso de 1000 milissegundos (1 segundo)
+});
+
+</script>
+</html>
