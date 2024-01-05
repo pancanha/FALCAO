@@ -168,6 +168,15 @@ img {
 }   
 
 @media screen and (max-width: 768px) {
+
+    #nav.active #menu{
+        height: 40vh;
+        visibility: visible;
+    }
+#whatsapp{
+    display: none;
+}
+
     #header {
         flex-direction: column; /* Altera a direção do flex para coluna em resoluções menores */
         text-align: center; /* Alinha o texto ao centro quando a direção do flex é coluna */
