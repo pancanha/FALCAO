@@ -40,14 +40,32 @@ a {
 
 
 #contato1 {
-    text-align: center;
-    background-color: #2057fc;
-    color: white;
-    padding: 26px;
     display: block;
-    
-    
+    text-align: right;
+    background-color: #327be9;
+    padding: 26px; 
+     
 }
+
+
+#contato2 {
+   margin-right: 10%;
+   font-family: sans-serif;
+   font-size: 18px;
+   font-weight: 600;
+   color:#ffffff
+   
+}
+#contato2>img {
+    margin-bottom: -10px;
+    margin-right: -1px;
+    font-family: sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    color:#ffffff
+    
+ }
+
 
 #header {
     box-sizing: border-box;
@@ -99,18 +117,35 @@ img {
 #btn-mobile{
     display: none;
 }
+@media screen and (max-width: 1010px) {
 
+    #nav.active #menu{
+        height: 40vh;
+        visibility: visible;
+    }
+#whatsapp{
+    display: inline-block;
+}
+
+    #header {
+        flex-direction: column; /* Altera a direção do flex para coluna em resoluções menores */
+        text-align: center; /* Alinha o texto ao centro quando a direção do flex é coluna */
+    }
+
+    img {
+        margin-right: 0; /* Remove a margem à direita da imagem em resoluções menores */
+        margin-bottom: 1rem; /* Adiciona margem inferior à imagem para separá-la do texto centralizado */
+    }
+}
 
 
 @media (max-width:600px){
-
-    
 
     #menu {
         display: block;
         position: absolute;
         width: 100%;
-        top: 50%;
+        top: 48%;
         transform: translateY(10%);
         right: 0;
         background-color: #e7e7e7;
@@ -144,7 +179,7 @@ img {
     }
 
     #hamburger {
-        border-top: 2px solid;
+        border-top: 2px solid ;
         width: 20px;
         display: block;
         margin-top: 4px;
@@ -178,24 +213,38 @@ img {
         visibility: hidden;
     }
 }   
-
-@media screen and (max-width: 1010px) {
-
+@media (max-width:400px){
+    #menu {
+        display: block;
+        position: absolute;
+        width: 100%;
+        top: 50%;
+        transform: translateY(10%);
+        right: 0;
+        background-color: #e7e7e7;
+        z-index: 1000;
+        transition: 0.6s;
+        height: 0;
+        visibility: hidden;
+        overflow-y: hidden; /* Remover a barra de rolagem vertical */
+    }
     #nav.active #menu{
         height: 40vh;
         visibility: visible;
     }
-#whatsapp{
-    display: inline-block;
+    
 }
-
-    #header {
-        flex-direction: column; /* Altera a direção do flex para coluna em resoluções menores */
-        text-align: center; /* Alinha o texto ao centro quando a direção do flex é coluna */
-    }
-
-    img {
-        margin-right: 0; /* Remove a margem à direita da imagem em resoluções menores */
-        margin-bottom: 1rem; /* Adiciona margem inferior à imagem para separá-la do texto centralizado */
-    }
+@media (max-width:375px){
+    #menu {
+    top: 60%;
+}
+#nav.active #menu{
+    height: 50vh;
+    visibility: visible;
+}
+}
+@media (max-width:300px){
+    #menu {
+    top: 60%;
+}
 }
