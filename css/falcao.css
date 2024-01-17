@@ -88,12 +88,11 @@ a {
     background-color: #383b9c;
     color: white;
     border-radius: 30px;
-    display: block;
     margin-left: 30px;
     padding: 10px 50px;
     position: relative;
-    
-    
+    left: 20px;
+
 }
 img {
     margin-right: 1rem;
