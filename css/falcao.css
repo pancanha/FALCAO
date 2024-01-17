@@ -76,6 +76,9 @@ a {
     background-color: #e7e7e7;
     padding: 60px 0px 60px 0px;
     
+    
+    
+    
 }
 #nav {
     display: flex;
@@ -85,9 +88,11 @@ a {
     background-color: #383b9c;
     color: white;
     border-radius: 30px;
-    align-items: center;
-    text-align: center;
+    display: block;
+    margin-left: 30px;
     padding: 10px 50px;
+    position: relative;
+    
     
 }
 img {
