@@ -46,7 +46,11 @@ a {
     padding: 26px; 
      
 }
+#xtiwitter{
+    display: flex;
+    flex-direction: row;
 
+}
 
 #contato2 {
    margin-right: 10%;
