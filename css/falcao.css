@@ -40,35 +40,50 @@ a {
 
 
 #contato1 {
-    display: block;
+    display: flex;
     text-align: right;
     background-color: #327be9;
     padding: 26px; 
-     
 }
-#xtiwitter{
+
+#xtwitter {
     display: flex;
     flex-direction: row;
-
+    background-color: white;
+    
 }
+#contato1 img {
+    background-color: white;
+    border-radius: 20px;
+    border-color: #02054b;
+    
+}
+#contato1 img:hover {
+    background-color: rgb(127, 179, 238);
+    
+    
+    
+}
+
 
 #contato2 {
-   margin-right: 10%;
-   font-family: sans-serif;
-   font-size: 18px;
-   font-weight: 600;
-   color:#ffffff
-   
-}
-#contato2>img {
+    font-family: sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    color: #ffffff;
+    margin-left: auto; /* Adicionado para empurrar para a direita */
+ }
+ 
+
+#contato2 > img {
     margin-bottom: -10px;
     margin-right: -1px;
     font-family: sans-serif;
     font-size: 18px;
     font-weight: 600;
-    color:#ffffff
-    
- }
+    color: #ffffff;
+}
+
 
 
 #header {
