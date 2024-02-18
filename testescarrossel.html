@@ -64,10 +64,15 @@
       }
 
       .carousel-text {
-        display: none;
-        text-align: center;
-        padding: 10px;
-      }
+    display: none;
+    text-align: center;
+    padding: 30px;
+    margin-left: 200px;
+    text-align: left;
+    max-width: 80vh;
+    opacity: 0; /* Inicialmente, definir a opacidade como 0 */
+    transition: opacity 1.5s ease-in-out; /* Adicionar transição de opacidade */
+}
 
       .active {
         display: block;
@@ -98,40 +103,56 @@
     </div>
     
     <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            const texts = document.querySelectorAll(".carousel-text");
-            let index = 0;
+      document.addEventListener("DOMContentLoaded", function () {
+    const texts = document.querySelectorAll(".carousel-text");
+    let index = 0;
 
-            function showText(idx) {
-                index = idx;
-                texts.forEach((text, i) => {
-                    if (i === index) {
-                        text.classList.add("active");
-                    } else {
-                        text.classList.remove("active");
-                    }
-                });
+    function showText(index) {
+        const currentText = texts[index];
+        fadeIn(currentText); // Mostrar o texto atual gradualmente
 
-                const indicators = document.querySelectorAll(".carousel-indicator");
-                indicators.forEach((indicator, i) => {
-                    if (i === index) {
-                        indicator.classList.add("active");
-                    } else {
-                        indicator.classList.remove("active");
-                    }
-                });
+        setTimeout(function () {
+            fadeOut(currentText); // Esconder o texto atual gradualmente após um atraso
+        }, 2500); // Tempo de atraso ajustável para a transição entre textos
+    }
+
+    function fadeIn(element) {
+        element.style.display = "block"; // Mostrar o elemento
+        element.style.opacity = 0; // Inicializar a opacidade como 0
+
+        let opacity = 0;
+        const fadeInInterval = setInterval(function () {
+            if (opacity >= 1) {
+                clearInterval(fadeInInterval);
+            } else {
+                opacity += 0.55; // Aumentar gradualmente a opacidade
+                element.style.opacity = opacity;
             }
+        }, 50); // Ajustar a velocidade da transição aqui
+    }
 
-            function nextText() {
-                index++;
+    function fadeOut(element) {
+        let opacity = 1;
+        const fadeOutInterval = setInterval(function () {
+            if (opacity <= 0) {
+                clearInterval(fadeOutInterval);
+                element.style.display = "none"; // Esconder o elemento quando a opacidade for 0
+                index++; // Avançar para o próximo texto após esconder o atual
                 if (index >= texts.length) {
-                    index = 0;
+                    index = 0; // Reiniciar o índice quando chegar ao último texto
                 }
-                showText(index);
+                showText(index); // Mostrar o próximo texto
+            } else {
+                opacity -= 0.05; // Diminuir gradualmente a opacidade
+                element.style.opacity = opacity;
             }
+        }, 50); // Ajustar a velocidade da transição aqui
+    }
 
-            setInterval(nextText, 3000);
-        });
+    showText(index); // Inicialmente, mostrar o primeiro texto
+});
+
+
     </script>
 </body>
 </html>
