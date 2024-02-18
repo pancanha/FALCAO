@@ -146,19 +146,20 @@
     width: 100%;
     height: 5px;
     background-color: orange;
-    animation: moveOrangeLine 13s infinite; /* Duração total da animação */
+    animation: moveOrangeLineFirst 15s infinite; /* Duração total da animação */
     transform-origin: left; /* Define a origem da transformação à esquerda */
 }
 
-/* Animação para mover a linha laranja */
-@keyframes moveOrangeLine {
-    0%, 30% {
-        transform: scaleX(0); /* Inicia invisível e permanece por 3 segundos */
+/* Animação para a primeira linha laranja */
+@keyframes moveOrangeLineFirst {
+    20% {
+        transform: scaleX(0); 
     }
     100% {
         transform: scaleX(1); /* Termina visível */
     }
 }
+
 
 
     </style>
@@ -193,8 +194,8 @@
     setTimeout(() => {
         showText(index);
         index++;
-        setInterval(nextText, 10000); // A partir do segundo texto, muda para 10 segundos
-    }, 3000);
+        setInterval(nextText, 15000); // A partir do segundo texto, muda para 10 segundos
+    }, 0);
 });
 
 

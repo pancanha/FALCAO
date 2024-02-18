@@ -136,8 +136,8 @@ img {
     border-radius: 15px;
 }
 #menu a:hover{
-    border-color: blue; /* Torna a borda preta ao passar o mouse */
-    color: blue;
+    border-color: #F6962F; /* Torna a borda preta ao passar o mouse */
+    color:rgb(44, 44, 248);
 }
 
 
