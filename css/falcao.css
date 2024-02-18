@@ -27,10 +27,12 @@
     --fonte-public: 'public';
 }
 
-body, ul {
-    margin: 0px;
-    padding: 0px;
-}
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 75%;
+  }
+
 
 a {
     color: black;
@@ -94,6 +96,7 @@ a {
     justify-content: center;
     background-color: #e7e7e7;
     padding: 60px 0px 60px 0px;
+    /* margin-bottom: -22vh; */
     
     
     
@@ -123,6 +126,7 @@ img {
     display: flex;
     list-style: none;
     gap:.4rem;
+    
 }
 #menu a{
     display: block;
