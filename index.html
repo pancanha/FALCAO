@@ -140,50 +140,64 @@
 
         /* Estilizando a linha laranja */
         #orange-line {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            height: 5px;
-            background-color: orange;
-            animation: moveOrangeLine 4s infinite; /* Animação da linha laranja */
-        }
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background-color: orange;
+    animation: moveOrangeLine 13s infinite; /* Duração total da animação */
+    transform-origin: left; /* Define a origem da transformação à esquerda */
+}
 
-        /* Animação para mover a linha laranja */
-        @keyframes moveOrangeLine {
-            0% {
-                transform: scaleX(0); /* Inicia invisível */
-            }
-            100% {
-                transform: scaleX(1); /* Termina visível */
-            }
-        }
+/* Animação para mover a linha laranja */
+@keyframes moveOrangeLine {
+    0%, 30% {
+        transform: scaleX(0); /* Inicia invisível e permanece por 3 segundos */
+    }
+    100% {
+        transform: scaleX(1); /* Termina visível */
+    }
+}
+
+
     </style>
+
+    <script>
+        
+    </script>
     <script>
         document.addEventListener("DOMContentLoaded", function () {
-            const texts = document.querySelectorAll(".carousel-text");
-            let index = 0;
+    const texts = document.querySelectorAll(".carousel-text");
+    let index = 0;
 
-            function showText(index) {
-                texts.forEach((text, i) => {
-                    if (i === index) {
-                        text.classList.add("active");
-                    } else {
-                        text.classList.remove("active");
-                    }
-                });
+    function showText(index) {
+        texts.forEach((text, i) => {
+            if (i === index) {
+                text.classList.add("active");
+            } else {
+                text.classList.remove("active");
             }
-
-            function nextText() {
-                index++;
-                if (index >= texts.length) {
-                    index = 0;
-                }
-                showText(index);
-            }
-
-            setInterval(nextText, 4000);
         });
+    }
+
+    function nextText() {
+        showText(index);
+        index++;
+        if (index >= texts.length) {
+            index = 0;
+        }
+    }
+
+    // Exibe o primeiro texto após 3 segundos
+    setTimeout(() => {
+        showText(index);
+        index++;
+        setInterval(nextText, 10000); // A partir do segundo texto, muda para 10 segundos
+    }, 3000);
+});
+
+
     </script>
 
     <style>
