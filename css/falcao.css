@@ -354,7 +354,7 @@ img {
     box-sizing: border-box;
     cursor: pointer;
     border-style: solid;
-    border-color: #05aff2;
+    border-color: #ffffff;
 }
 
 .Numero:hover {
@@ -365,7 +365,7 @@ img {
     font-weight: bold;
     fill: var(--cor10);
     color: var(--cor10);
-    background-color: #ee9c04;
+    background-color: #3050b9;
     border-radius: 50px;
     width: 100%;
     line-height: 1;
@@ -375,7 +375,7 @@ img {
     box-sizing: border-box;
     cursor: pointer;
     border-style: solid;
-    border-color: #f2da05;
+    border-color: #b0bde7;
 }
 
 .Numero>a {
